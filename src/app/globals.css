@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --navy:       #0d1b4b;
+  --navy-dark:  #080f2a;
+  --navy-mid:   #1a2d5a;
+  --red:        #c41e3a;
+  --red-dark:   #9e1830;
+  --white:      #ffffff;
+  --gray-light: #f4f5f7;
+  --gray-mid:   #e0e2e7;
+  --text-muted: #6b7280;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--navy);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Custom Scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gray-light); }
+::-webkit-scrollbar-thumb { background: var(--red); }
+::-webkit-scrollbar-thumb:hover { background: var(--red-dark); }
+
+/* ── Selection ───────────────────────────────────────────────── */
+::selection { background: var(--red); color: #fff; }
+
+/* ── Button utility classes ──────────────────────────────────── */
+.btn-red {
+  background: var(--red);
+  color: #fff;
+  transition: background 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-red:hover { background: var(--red-dark); }
+
+.btn-navy {
+  background: var(--navy);
+  color: #fff;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-navy:hover { background: var(--red); }
+
+.btn-outline-navy {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-outline-navy:hover { background: var(--navy); color: #fff; }
+
+.btn-outline-white {
+  border: 1.5px solid rgba(255,255,255,0.45);
+  color: #fff;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+/* ── Link hover ──────────────────────────────────────────────── */
+.link-hover-red { color: var(--navy); transition: color 0.2s; }
+.link-hover-red:hover { color: var(--red); }
+
+/* ── Card lift ───────────────────────────────────────────────── */
+.card-lift { transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s; }
+.card-lift:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+/* ── Image zoom utility ──────────────────────────────────────── */
+.img-zoom { overflow: hidden; }
+.img-zoom img { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.img-zoom:hover img { transform: scale(1.08); }
+
+/* ── Smooth page transitions ─────────────────────────────────── */
+main { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
