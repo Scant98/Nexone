@@ -16,6 +16,12 @@ const leaders = [
     desc: "Supports strategic execution and partnership development, working closely with the Chairman to strengthen governance and drive Nexone Group's expansion across sectors.",
     image: "/images/vice chairman.jpeg",
   },
+  {
+    name: "Martin Andrasi",
+    title: "International Business Partner",
+    desc: "Connects Nexone Group with international markets and cross-border investors, strengthening the Group's partnerships across Europe and supporting its expansion beyond Africa.",
+    image: "/images/internatinal business partner.jpeg",
+  },
 ];
 
 const values = [
@@ -152,7 +158,7 @@ export default function AboutPageContent() {
             governance and growth across Africa&apos;s most promising sectors.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {leaders.map((l, i) => (
               <div key={i} className="bg-white card-lift overflow-hidden" style={{ border: "1px solid var(--gray-mid)" }}>
                 <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>

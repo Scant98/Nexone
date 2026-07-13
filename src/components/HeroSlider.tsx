@@ -6,14 +6,6 @@ import Link from 'next/link'
 
 const slides = [
   {
-    image: '/images/Mining5.jpeg',
-    tag: 'NATURAL RESOURCES & MINING',
-    headline: ['UNLOCKING', "AFRICA'S", 'MINERAL WEALTH'],
-    sub: 'Responsible exploration, trading, value addition, and export of high-value natural resources including gemstones and strategic commodities.',
-    cta: 'OUR BUSINESSES',
-    href: '/businesses',
-  },
-  {
     image: '/images/Agriculture1.jpeg',
     tag: 'AGRICULTURE & AGRIBUSINESS',
     headline: ['FEEDING THE', 'CONTINENT'],
@@ -22,18 +14,26 @@ const slides = [
     href: '/businesses',
   },
   {
-    image: '/images/Real estate.2.jpeg',
-    tag: 'REAL ESTATE & PROPERTY',
-    headline: ["BUILDING AFRICA'S", 'FUTURE CITIES'],
-    sub: 'Modern residential, commercial, hospitality, and mixed-use properties meeting growing demand for quality infrastructure across Tanzania.',
-    cta: 'OUR BUSINESSES',
-    href: '/businesses',
-  },
-  {
     image: '/images/logistic5.jpeg',
     tag: 'LOGISTICS & SUPPLY CHAIN',
     headline: ['CONNECTING', "AFRICA'S", 'MARKETS'],
     sub: 'Integrated logistics solutions including freight forwarding, transportation, warehousing, and end-to-end supply chain management across East and Central Africa.',
+    cta: 'OUR BUSINESSES',
+    href: '/businesses',
+  },
+  {
+    image: '/images/Mining5.jpeg',
+    tag: 'NATURAL RESOURCES & MINING',
+    headline: ['UNLOCKING', "AFRICA'S", 'MINERAL WEALTH'],
+    sub: 'Responsible exploration, trading, value addition, and export of high-value natural resources including gemstones and strategic commodities.',
+    cta: 'OUR BUSINESSES',
+    href: '/businesses',
+  },
+  {
+    image: '/images/Real estate.jpeg',
+    tag: 'REAL ESTATE & PROPERTY',
+    headline: ["BUILDING AFRICA'S", 'FUTURE CITIES'],
+    sub: 'Modern residential, commercial, hospitality, and mixed-use properties meeting growing demand for quality infrastructure across Tanzania.',
     cta: 'OUR BUSINESSES',
     href: '/businesses',
   },
