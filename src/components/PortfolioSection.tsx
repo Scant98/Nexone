@@ -67,11 +67,14 @@ function SectorCard({ sector, index }: { sector: typeof sectors[0]; index: numbe
           style={{ background: 'linear-gradient(to top, rgba(8,15,42,0.92) 0%, rgba(8,15,42,0.4) 55%, rgba(8,15,42,0.15) 100%)' }}
         />
 
-        {/* Hover overlay */}
+        {/* Hover overlay (md+ only) */}
         <div
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
+          className="absolute inset-0 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-400"
           style={{ background: 'rgba(196,30,58,0.75)' }}
         />
+
+        {/* Mobile scrim — keeps centred text readable without hover */}
+        <div className="absolute inset-0 md:hidden" style={{ background: 'rgba(8,15,42,0.5)' }} />
 
         {/* Sector tag top-left */}
         <div className="absolute top-5 left-5 z-10">
@@ -81,13 +84,13 @@ function SectorCard({ sector, index }: { sector: typeof sectors[0]; index: numbe
           </span>
         </div>
 
-        {/* Default content (bottom) */}
-        <div className="absolute bottom-0 left-0 right-0 p-7 z-10 transition-all duration-400 group-hover:translate-y-2 group-hover:opacity-0">
+        {/* Default content (bottom, md+ only — mobile shows full details instead) */}
+        <div className="absolute bottom-0 left-0 right-0 p-7 z-10 hidden md:block transition-all duration-400 group-hover:translate-y-2 group-hover:opacity-0">
           <h3 className="text-xl font-black text-white leading-tight">{sector.title}</h3>
         </div>
 
-        {/* Hover content (centre) */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center p-8 z-20 opacity-0 group-hover:opacity-100 transition-all duration-400 translate-y-4 group-hover:translate-y-0">
+        {/* Detail content (centre) — always visible on mobile, hover-revealed on md+ */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-8 z-20 opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-400 md:translate-y-4 md:group-hover:translate-y-0">
           <h3 className="text-xl font-black text-white text-center mb-3 leading-tight">{sector.title}</h3>
           <p className="text-sm text-white text-center leading-relaxed mb-6 opacity-90">{sector.desc}</p>
           <span

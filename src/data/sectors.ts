@@ -1,3 +1,11 @@
+export interface Attraction {
+  title: string;
+  tag: string;
+  desc: string;
+  images: string[];
+  highlights?: string[];
+}
+
 export interface Sector {
   id: string;
   number: string;
@@ -7,6 +15,7 @@ export interface Sector {
   longDesc: string[];
   image: string;
   image2: string;
+  attractions?: Attraction[];
 }
 
 export const sectors: Sector[] = [
@@ -72,8 +81,8 @@ export const sectors: Sector[] = [
       "We invest in renewable generation, clean technologies, and energy infrastructure that power industrial growth while reducing reliance on costly imported fuel.",
       "Reliable, affordable energy is foundational to every other sector we operate in — from processing agricultural output to running logistics fleets and mineral operations.",
     ],
-    image: "/images/Mining4.jpeg",
-    image2: "/images/Mining5.jpeg",
+    image: "/images/energy.jpeg",
+    image2: "/images/energy1.jpeg",
   },
   {
     id: "agriculture",
@@ -95,11 +104,59 @@ export const sectors: Sector[] = [
     tags: ["Eco-Tourism", "Luxury", "Heritage"],
     desc: "Tourism experiences showcasing Africa's natural beauty, wildlife, cultural heritage, and luxury hospitality while creating employment for local communities.",
     longDesc: [
-      "We develop eco-tourism experiences and hospitality properties that showcase Tanzania's landscapes, wildlife, and cultural heritage to a global audience.",
+      "We develop eco-tourism experiences and hospitality properties that showcase Tanzania's landscapes, wildlife, and cultural heritage to a global audience — from the beaches of Zanzibar to the summit of Mount Kilimanjaro and the plains of the Serengeti.",
       "Every development is designed to create meaningful local employment and support conservation, ensuring tourism growth benefits the communities that host it.",
     ],
-    image: "/images/Real estate.2.jpeg",
-    image2: "/images/Real estate.3.jpeg",
+    image: "/images/Tourism Mount-Kilimanjaro-Tanzania.webp",
+    image2: "/images/tourism.jpeg",
+    attractions: [
+      {
+        title: "Zanzibar Island",
+        tag: "Beaches & Heritage",
+        desc: "White-sand beaches, turquoise waters, and the historic Stone Town — a UNESCO World Heritage Site rich with Swahili culture, spice farms, and centuries of Indian Ocean trading history.",
+        images: [
+          "/images/Tourism zanzibar_island_boat.webp",
+          "/images/Tourism Zanzibar_Island_Stone_Town_01.jpg",
+        ],
+        highlights: [
+          "Stone Town's winding alleys, carved doors, and coral-stone architecture reflect centuries of Swahili, Arab, and Indian Ocean trade.",
+          "Spice tours through Zanzibar's plantations trace the island's history as the historic 'Spice Island' of the Indian Ocean.",
+          "Turquoise reefs and white-sand beaches at Nungwi, Kendwa, and Paje support a fast-growing dive and water-sports economy.",
+          "Hospitality development here creates direct employment for local guides, boat operators, and lodge staff.",
+        ],
+      },
+      {
+        title: "Mount Kilimanjaro",
+        tag: "Africa's Highest Peak",
+        desc: "The roof of Africa at 5,895 metres. Trekkers from around the world journey to its snow-capped summit, supporting guides, porters, and mountain lodges across the Kilimanjaro region.",
+        images: [
+          "/images/tourism4.jpeg",
+          "/images/Tourism kilimanjaro mount.jpeg",
+        ],
+        highlights: [
+          "Africa's highest free-standing mountain at 5,895 metres, and one of the world's most iconic trekking summits.",
+          "Six established routes — including Machame and Marangu — support a year-round guiding and porter economy.",
+          "Mountain lodges and gateway towns like Moshi depend on steady trekker traffic for employment and local trade.",
+          "Conservation of the surrounding national park protects rare alpine ecosystems found nowhere else in Tanzania.",
+        ],
+      },
+      {
+        title: "Wildlife Safaris",
+        tag: "Serengeti & Beyond",
+        desc: "From the Great Migration across the Serengeti to the Ngorongoro Crater, Tanzania's national parks deliver some of the world's most spectacular game drives, balloon safaris, and eco-lodges.",
+        images: [
+          "/images/wildlife1.jpg",
+          "/images/wildlife2.jpg",
+          "/images/tourism serengeti1.jpeg",
+        ],
+        highlights: [
+          "The Great Migration carries over a million wildebeest and zebra across the Serengeti each year — one of nature's largest movements.",
+          "The Ngorongoro Crater's dense wildlife concentration makes it one of the most reliable game-viewing destinations on the continent.",
+          "Balloon safaris and eco-lodges across the northern circuit generate premium, high-employment tourism revenue.",
+          "Community-based conservancies around the parks channel tourism income directly to neighbouring villages.",
+        ],
+      },
+    ],
   },
   {
     id: "trade",
@@ -150,8 +207,8 @@ export const sectors: Sector[] = [
       "We provide strategic support services, trading, and distribution infrastructure across the oil and gas value chain.",
       "As energy demand grows across the region, we focus on the storage, transport, and distribution capacity needed to keep supply reliable and secure.",
     ],
-    image: "/images/Mining5.jpeg",
-    image2: "/images/Mining1.jpeg",
+    image: "/images/oil-gas1.jpeg",
+    image2: "/images/oil-gas2.jpeg",
   },
 ];
 

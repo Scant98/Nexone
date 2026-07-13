@@ -32,14 +32,20 @@ function SectorCard({ sector, index }: { sector: Sector; index: number }) {
           sizes="(max-width: 768px) 100vw, 33vw"
         />
 
-        {/* Hover overlay — dark navy slate, fades in */}
+        {/* Hover overlay — dark navy slate, fades in (md+ only) */}
         <div
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
+          className="absolute inset-0 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-400"
           style={{ background: "rgba(13,27,75,0.91)" }}
         />
 
-        {/* Hover content */}
-        <div className="absolute inset-0 flex flex-col justify-between p-8 z-10 opacity-0 group-hover:opacity-100 transition-all duration-400 translate-y-3 group-hover:translate-y-0">
+        {/* Mobile overlay — always visible gradient so details are readable without hover */}
+        <div
+          className="absolute inset-0 md:hidden"
+          style={{ background: "linear-gradient(to top, rgba(13,27,75,0.95) 0%, rgba(13,27,75,0.6) 60%, rgba(13,27,75,0.35) 100%)" }}
+        />
+
+        {/* Card content — always visible on mobile, hover-revealed on md+ */}
+        <div className="absolute inset-0 flex flex-col justify-between p-8 z-10 opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-400 md:translate-y-3 md:group-hover:translate-y-0">
           {/* Top — title + tags */}
           <div>
             <h3 className="text-2xl font-black text-white leading-tight mb-2">{sector.title}</h3>

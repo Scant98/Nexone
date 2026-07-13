@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
+import AttractionsGrid from "@/components/AttractionsGrid";
 import type { Sector } from "@/data/sectors";
 
 export default function BusinessDetailContent({ sector }: { sector: Sector }) {
@@ -58,6 +59,24 @@ export default function BusinessDetailContent({ sector }: { sector: Sector }) {
           </div>
         </div>
       </section>
+
+      {/* ─── Attractions (tourism) ─────────────────────────────────── */}
+      {sector.attractions && sector.attractions.length > 0 && (
+        <section className="py-20 px-6" style={{ background: "var(--navy)" }}>
+          <div className="max-w-7xl mx-auto">
+            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: "var(--red)" }}>
+              DISCOVER TANZANIA
+            </p>
+            <h2 className="text-3xl font-black text-white mb-4">Top Attractions</h2>
+            <p className="text-sm leading-relaxed mb-12 max-w-2xl" style={{ color: "rgba(255,255,255,0.7)" }}>
+              From island beaches to Africa&apos;s highest peak, our tourism investments centre on the
+              destinations the world travels to Tanzania to experience.
+            </p>
+
+            <AttractionsGrid attractions={sector.attractions} />
+          </div>
+        </section>
+      )}
 
       {/* ─── Focus Areas ───────────────────────────────────────────── */}
       <section className="py-20 px-6" style={{ background: "var(--gray-light)" }}>

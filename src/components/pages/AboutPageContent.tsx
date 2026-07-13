@@ -1,6 +1,22 @@
+import Image from "next/image";
 import PageBanner from "@/components/PageBanner";
 import StorySlider from "@/components/StorySlider";
 import Link from "next/link";
+
+const leaders = [
+  {
+    name: "Mohamedi Omari Mpendu",
+    title: "Chairman",
+    desc: "Provides strategic direction and governance oversight across Nexone Group's diversified investment portfolio, guiding the board's long-term vision for growth across Africa.",
+    image: "/images/chairman.jpeg",
+  },
+  {
+    name: "Adam Julius Masunga",
+    title: "Vice Chairman",
+    desc: "Supports strategic execution and partnership development, working closely with the Chairman to strengthen governance and drive Nexone Group's expansion across sectors.",
+    image: "/images/vice chairman.jpeg",
+  },
+];
 
 const values = [
   {
@@ -118,6 +134,52 @@ export default function AboutPageContent() {
                   {item.label}
                 </p>
                 <p className="text-sm leading-relaxed text-white opacity-85">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Leadership ────────────────────────────────────────────────── */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: "var(--red)" }}>
+            OUR LEADERSHIP
+          </p>
+          <h2 className="text-3xl font-black mb-4" style={{ color: "var(--navy)" }}>Guiding Nexone Group</h2>
+          <p className="text-sm leading-relaxed mb-12 max-w-2xl" style={{ color: "var(--text-muted)" }}>
+            Our leadership brings together deep local expertise and strategic vision to guide Nexone Group&apos;s
+            governance and growth across Africa&apos;s most promising sectors.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {leaders.map((l, i) => (
+              <div key={i} className="bg-white card-lift overflow-hidden" style={{ border: "1px solid var(--gray-mid)" }}>
+                <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
+                  <Image
+                    src={l.image}
+                    alt={`${l.name} — ${l.title}, Nexone Group`}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: "linear-gradient(to top, rgba(8,15,42,0.9) 0%, transparent 55%)" }}
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-7">
+                    <span
+                      className="inline-block text-xs font-bold tracking-widest uppercase text-white px-3 py-1 mb-3"
+                      style={{ background: "var(--red)" }}
+                    >
+                      {l.title}
+                    </span>
+                    <h3 className="text-2xl font-black text-white leading-tight">{l.name}</h3>
+                  </div>
+                </div>
+                <div className="p-7">
+                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>{l.desc}</p>
+                </div>
               </div>
             ))}
           </div>

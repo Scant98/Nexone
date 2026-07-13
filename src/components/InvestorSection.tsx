@@ -92,7 +92,7 @@ export default function InvestorSection() {
             />
             <div className="absolute inset-0" style={{ background: 'rgba(8,15,42,0.5)' }} />
             <div className="absolute bottom-5 left-6">
-              <span className="text-xs font-bold tracking-widest text-white opacity-60">DAR ES SALAAM, TANZANIA</span>
+              <span className="text-xs font-bold tracking-widest text-white opacity-60">BRATISLAVA, SLOVAKIA</span>
             </div>
           </div>
 

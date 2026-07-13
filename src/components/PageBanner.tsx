@@ -17,7 +17,7 @@ export default function PageBanner({ tag, title, subtitle, image = '/images/Mini
       className="relative flex items-end pt-20 overflow-hidden"
       style={{
         height: '420px',
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url("${encodeURI(image)}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
