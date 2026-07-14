@@ -30,7 +30,7 @@ export const sectors: Sector[] = [
       "We work with licensed operators and international partners to ensure every transaction meets rigorous compliance, traceability, and environmental standards — turning raw mineral wealth into lasting community and shareholder value.",
     ],
     image: "/images/Mining1.jpeg",
-    image2: "/images/Mining2.jpeg",
+    image2: "/images/Mining5.jpeg",
   },
   {
     id: "logistics",
@@ -68,8 +68,8 @@ export const sectors: Sector[] = [
       "Our infrastructure investments target the industrial parks, transport corridors, and utility systems that unlock commerce across East Africa.",
       "By de-risking early-stage infrastructure development, we help open new economic corridors that agriculture, mining, and manufacturing businesses depend on to reach markets.",
     ],
-    image: "/images/Mining3.jpeg",
-    image2: "/images/Real estate.3.jpeg",
+    image: "/images/infrastructure1.jpg",
+    image2: "/images/infrastructure.jpg",
   },
   {
     id: "energy",
@@ -168,7 +168,7 @@ export const sectors: Sector[] = [
       "Our international trade desk connects African producers with buyers abroad through ethical sourcing, freight coordination, and structured trade finance.",
       "We act as a trusted bridge for exporters who need reliable market access without navigating cross-border logistics and compliance alone.",
     ],
-    image: "/images/Agriculture3.jpeg",
+    image: "/images/logistic2.jpeg",
     image2: "/images/logistic5.jpeg",
   },
   {
@@ -194,8 +194,8 @@ export const sectors: Sector[] = [
       "We invest in digital platforms, fintech, and data tools that improve efficiency and financial inclusion across Africa's fast-growing economies.",
       "Technology is a multiplier across our portfolio — helping our agriculture, logistics, and trade businesses operate with greater transparency and speed.",
     ],
-    image: "/images/Agriculture4.jpeg",
-    image2: "/images/investors relation.jpeg",
+    image: "/images/tech1.jpeg",
+    image2: "/images/tech.jpg",
   },
   {
     id: "oil-gas",
