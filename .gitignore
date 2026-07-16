@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+# note: /out/ is committed on purpose — cPanel deploys these prebuilt files
 
 # production
 /build
