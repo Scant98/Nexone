@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { sectors } from "@/data/sectors";
 import { SITE_URL } from "@/data/site";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
