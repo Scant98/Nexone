@@ -17,8 +17,14 @@ export async function generateMetadata({
   if (!sector) return {};
 
   return {
-    title: `${sector.title} | Nexone Group`,
+    title: sector.title,
     description: sector.desc,
+    alternates: { canonical: `/businesses/${slug}` },
+    openGraph: {
+      title: `${sector.title} | Nexone Group`,
+      description: sector.desc,
+      images: [{ url: sector.image }],
+    },
   };
 }
 

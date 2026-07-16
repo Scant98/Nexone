@@ -1,9 +1,10 @@
 import InvestorRelationsPageContent from "@/components/pages/InvestorRelationsPageContent";
 
 export const metadata = {
-  title: "Investor Relations | Nexone Group",
+  title: "Investor Relations",
   description:
-    "Access financial reports, ESG metrics, and corporate governance disclosures from Nexone Group.",
+    "Partner with Nexone Group and access investment opportunities across Africa, backed by strong corporate governance.",
+  alternates: { canonical: "/investor-relations" },
 };
 
 export default function InvestorRelationsPage() {
