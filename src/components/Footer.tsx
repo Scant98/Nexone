@@ -105,7 +105,7 @@ export default function Footer() {
                 <span className="text-base mt-0.5" style={{ color: 'var(--red)' }}>✉️</span>
                 <div>
                   <p className="text-xs mb-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>Email</p>
-                  <p className="text-sm text-white">info@nexonegroup.com</p>
+                  <p className="text-sm text-white">info@nexonegroup.co.tz</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">

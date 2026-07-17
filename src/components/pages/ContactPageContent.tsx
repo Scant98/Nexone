@@ -37,7 +37,7 @@ const contactDetails = [
   {
     icon: "✉️",
     label: "Email",
-    lines: ["info@nexonegroup.com"],
+    lines: ["info@nexonegroup.co.tz"],
   },
   {
     icon: "🕐",

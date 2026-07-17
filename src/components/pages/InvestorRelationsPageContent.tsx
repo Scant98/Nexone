@@ -260,7 +260,7 @@ export default function InvestorRelationsPageContent() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="mailto:info@nexonegroup.com"
+              href="mailto:info@nexonegroup.co.tz"
               className="btn-red px-8 py-4 text-sm font-bold tracking-widest"
             >EMAIL US →</a>
             <Link href="/contact" className="btn-outline-navy px-8 py-4 text-sm font-bold tracking-widest">

@@ -74,7 +74,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     telephone: "+255-750-070-000",
     contactType: "customer service",
-    email: "info@nexonegroup.com",
+    email: "info@nexonegroup.co.tz",
   },
 };
 
